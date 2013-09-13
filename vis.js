@@ -4,8 +4,8 @@ function LineChart()
         height = 400,
         xScale = d3.scale.linear(),
         yScale = d3.scale.linear(),
-        x = function(d, i) { return d; },
-        y = function(d, i) { return i; },
+        x = function(d, i) { return i; },
+        y = function(d, i) { return d; },
         xAxis = d3.svg.axis().scale(xScale),
         area = d3.svg.line()
                     .interpolate('basis')
@@ -23,8 +23,8 @@ function LineChart()
                         .append('g')
                         .attr('transform', 'translate(10, 0)');
 
-            xScale.domain(d3.extent(data)).range([0, width - 10]);
-            yScale.domain([0, data.length]).range([height - 20, 0]);
+            xScale.domain([0, data.length]).range([0, width - 10]);
+            yScale.domain(d3.extent(data)).range([height - 20, 0]);
             
             svg.append('g')
                 .attr({

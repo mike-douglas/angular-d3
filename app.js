@@ -34,7 +34,3 @@ app.controller('ExampleController', function($scope, LineChartVisualization) {
     
     $scope.sampleData = [10, 13, 145];
 });
-
-app.controller('ValueEditController', function($scope) {
-    
-});
