@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="http://code.angularjs.org/1.1.5/angular.js"></script>
+    <script type="text/javascript" src="http://d3js.org/d3.v2.js"></script>
+    <script type="text/javascript" src="vis.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <style>
+    path {
+        fill: none;
+        stroke: blue;
+        stroke-width: 1px;
+    }
+
+    line.tick {
+        stroke: blue;
+        stroke-width: 1px;
+    }
+    </style>
+    <title>Angular JS / D3 Demo</title>
+</head>
+<body ng-app="AngularD3Demo">
+    <div ng-controller="ExampleController">
+        <figure>
+            <visualization vis="barChart" data="sampleData" />
+        </figure>
+        {{ sampleData }}
+    </div>
+</body>
+</html>
